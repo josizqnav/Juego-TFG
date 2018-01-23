@@ -232,6 +232,11 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 290786562}
+    - target: {fileID: 114669565854782876, guid: dfa67efc728b32f4f8bb9fcfb9d66dd6,
+        type: 2}
+      propertyPath: targetMap
+      value: 
+      objectReference: {fileID: 1103168978}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dfa67efc728b32f4f8bb9fcfb9d66dd6, type: 2}
   m_IsPrefabParent: 0
@@ -296,6 +301,7 @@ GameObject:
   - component: {fileID: 613290445}
   - component: {fileID: 613290444}
   - component: {fileID: 613290443}
+  - component: {fileID: 613290447}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -359,12 +365,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 613290442}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13999939, y: -0.6500006, z: -10}
+  m_LocalPosition: {x: 14.22, y: -20.11, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1273332423}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &613290447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 613290442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8bd606c5f60bac4098e843783f235f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &861435999
 Prefab:
   m_ObjectHideFlags: 0
@@ -431,9 +448,19 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 611552964}
+    - target: {fileID: 114669565854782876, guid: dfa67efc728b32f4f8bb9fcfb9d66dd6,
+        type: 2}
+      propertyPath: targetMap
+      value: 
+      objectReference: {fileID: 2120367563}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dfa67efc728b32f4f8bb9fcfb9d66dd6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1103168978 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1331201608856564, guid: 9422ab132597812428953d76ea7d8172,
+    type: 2}
+  m_PrefabInternal: {fileID: 2123457958}
 --- !u!1 &1273332420
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +476,7 @@ GameObject:
   - component: {fileID: 1273332425}
   m_Layer: 0
   m_Name: Terra
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -466,6 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  initialMap: {fileID: 1103168978}
 --- !u!212 &1273332422
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -519,8 +547,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.36, y: -19.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 613290446}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -586,6 +613,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1 &2120367563 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1639484216340686, guid: 2d9332abaf06d9f43a0cf31cb2ec3fcb,
+    type: 2}
+  m_PrefabInternal: {fileID: 110669364}
 --- !u!1001 &2123457958
 Prefab:
   m_ObjectHideFlags: 0

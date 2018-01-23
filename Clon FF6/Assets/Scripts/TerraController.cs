@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class TerraController : MonoBehaviour {
 
@@ -8,11 +9,18 @@ public class TerraController : MonoBehaviour {
 	Animator anim;
 	Rigidbody2D rb2d;
 	Vector2 mov;
+	public GameObject initialMap;
+
+	void Awake (){
+		Assert.IsNotNull (initialMap);
+	}
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
 		rb2d = GetComponent<Rigidbody2D> ();
+
+		Camera.main.GetComponent<MainCamera>().SetBound(initialMap);
 	}
 	
 	// Update is called once per frame
@@ -20,16 +28,6 @@ public class TerraController : MonoBehaviour {
 		mov = new Vector2 (Input.GetAxisRaw ("Horizontal"),
 			Input.GetAxisRaw ("Vertical"));
 
-		/*Vector3 movimiento = new Vector3 (
-			                     Input.GetAxisRaw ("Horizontal"),
-			                     Input.GetAxisRaw ("Vertical"),
-			                     0
-		                     );
-		transform.position = Vector3.MoveTowards (
-			transform.position,
-			transform.position + movimiento,
-			velocidad
-		);*/
 		if (mov != Vector2.zero) {
 			anim.SetFloat ("movX", mov.x);
 			anim.SetFloat ("movY", mov.y);
