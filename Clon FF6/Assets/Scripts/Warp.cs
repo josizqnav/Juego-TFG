@@ -30,7 +30,7 @@ public class Warp : MonoBehaviour
 		//Comenzamos transición y desactivamos el movimiento del jugador
 		FadeIn ();
 		col.GetComponent<Animator> ().enabled = false;
-		col.GetComponent<TerraController> ().enabled = false;
+		col.GetComponent<PlayerController> ().enabled = false;
 
 		//Esperamos el tiempo para que la transición se complete
 		yield return new WaitForSeconds (fadeTime);
@@ -42,7 +42,7 @@ public class Warp : MonoBehaviour
 		//Deshacemos transición y habilitamos de nuevo al jugador
 		FadeOut ();
 		col.GetComponent<Animator> ().enabled = true;
-		col.GetComponent<TerraController> ().enabled = true;
+		col.GetComponent<PlayerController> ().enabled = true;
     }
 
 	// Método para dibujar un cuadrado negro que sirve de transición

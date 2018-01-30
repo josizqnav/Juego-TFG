@@ -8,7 +8,7 @@ public class MainCamera : MonoBehaviour {
 	float tLX, tLY, bRX, bRY;
 
 	void Awake () {
-		//El objetivo de la cámara será el juegor (Atención a poner el Tag de Terra como Player)
+		//El objetivo de la cámara será el juegor (Atención a poner el Tag del objeto como Player)
 		target = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 	

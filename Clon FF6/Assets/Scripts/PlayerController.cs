@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-public class TerraController : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
 	//Velocidad de movimiento
 	public float speed = 4f;
 
@@ -23,7 +23,7 @@ public class TerraController : MonoBehaviour {
 		//Se establecen los límites de la cámara
 		Camera.main.GetComponent<MainCamera>().SetBound(initialMap);
 	}
-	
+
 	void Update () {
 		//Se detecta el movimiento en el vector 2D creado
 		mov = new Vector2 (Input.GetAxisRaw ("Horizontal"),
@@ -36,7 +36,7 @@ public class TerraController : MonoBehaviour {
 		} else {
 			anim.SetBool ("andando", false);
 		}
-			
+
 	}
 
 	void FixedUpdate () {
