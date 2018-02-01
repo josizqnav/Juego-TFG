@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/menuInicio.unity
+    guid: 309eac81a77543847a295562bd4398c5
+  - enabled: 1
+    path: Assets/Scenes/cuevaSur.unity
+    guid: c7fccb01dfe97b34796ff8725dbc3636
