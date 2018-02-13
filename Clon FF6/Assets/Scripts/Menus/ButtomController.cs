@@ -36,11 +36,6 @@ public class ButtomController : MonoBehaviour {
 				actualMenu.SetActive (false);
 				nextMenu.SetActive(true);
 			}
-			if (Input.GetKeyDown (KeyCode.Z) && nameButtom=="Cargar") {
-				//Hacer esto en menú cargar. Ahora mismo se hace en Cargar Partida,
-				//aquí se debe sustituir por CambiarMenu
-				GlobalControl.Instance.loadGame ();
-			}
 			//Si elegimos Salir, saldremos del juego
 			if (Input.GetKeyDown (KeyCode.Z) && nameButtom=="Salir") {
 				Debug.Log ("Salir del juego");
@@ -50,27 +45,37 @@ public class ButtomController : MonoBehaviour {
 				actualMenu.SetActive (false);
 				nextMenu.GetComponent<Animator> ().enabled = true;
 				nextMenu.GetComponent<PlayerController> ().enabled = true;
-			}//Los botones Guardar se quitán para la primera iteracción
+			}
+			if (Input.GetKeyDown (KeyCode.Z) && nameButtom=="VolverMenuP") {
+				actualMenu.SetActive (false);
+				nextMenu.SetActive(true);
+			}//A partir de aquí se debe quitar para la primera iteracción.
+			//Cuando pulsemos x, se volverá al menú anterior en algunos casos.
+			if (Input.GetKeyDown (KeyCode.X)) {
+				if (nameButtom == "Cargar1" || nameButtom == "Cargar2" || nameButtom == "Cargar3"
+				   || nameButtom == "Guardar1" || nameButtom == "Guardar2" || nameButtom == "Guardar3"
+				   || nameButtom == "VolverMenuP") {
+					actualMenu.SetActive (false);
+					nextMenu.SetActive (true);
+				}
+			}//Distintas ranuras para cargar la partida
+			if (Input.GetKeyDown (KeyCode.Z) && nameButtom=="Cargar1") {
+				GlobalControl.Instance.loadGame("Saves/gamesave1.save");
+			}
+			if (Input.GetKeyDown (KeyCode.Z) && nameButtom=="Cargar2") {
+				GlobalControl.Instance.loadGame("Saves/gamesave2.save");
+			}
+			if (Input.GetKeyDown (KeyCode.Z) && nameButtom=="Cargar3") {
+				GlobalControl.Instance.loadGame("Saves/gamesave3.save");
+			}//Distintas ranuras para guardar la partida
 			if (Input.GetKeyDown (KeyCode.Z) && nameButtom=="Guardar1") {
-				GlobalControl.Instance.saveGame("Guardar1");
+				GlobalControl.Instance.saveGame("Saves/gamesave1.save");
 			}
 			if (Input.GetKeyDown (KeyCode.Z) && nameButtom=="Guardar2") {
-				GlobalControl.Instance.saveGame("Guardar2");
+				GlobalControl.Instance.saveGame("Saves/gamesave2.save");
 			}
 			if (Input.GetKeyDown (KeyCode.Z) && nameButtom=="Guardar3") {
-				GlobalControl.Instance.saveGame("Guardar3");
-			}
-			if (Input.GetKeyDown (KeyCode.X) && nameButtom=="Guardar1") {
-				actualMenu.SetActive (false);
-				nextMenu.SetActive(true);
-			}
-			if (Input.GetKeyDown (KeyCode.X) && nameButtom=="Guardar2") {
-				actualMenu.SetActive (false);
-				nextMenu.SetActive(true);
-			}
-			if (Input.GetKeyDown (KeyCode.X) && nameButtom=="Guardar3") {
-				actualMenu.SetActive (false);
-				nextMenu.SetActive(true);
+				GlobalControl.Instance.saveGame("Saves/gamesave3.save");
 			}
 		} else {
 			ImageButtom.color = colors [0];

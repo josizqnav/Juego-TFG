@@ -4,17 +4,13 @@ using UnityEngine;
 using System.IO;
 
 public class CheckSaveMenu : MonoBehaviour {
+	//Dependiendo de si existe la partida o no, deberá salir un texto u otro
 	public GameObject text1b1;
 	public GameObject text2b1;
 	public GameObject text1b2;
 	public GameObject text2b2;
 	public GameObject text1b3;
 	public GameObject text2b3;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 
 	void Update () {
 		if (File.Exists ("Saves/gamesave1.save")) {

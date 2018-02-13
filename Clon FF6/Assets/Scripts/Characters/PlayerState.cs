@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerState : MonoBehaviour {
+	//los stats del personaje
 	public PlayerStats savedPlayerStats;
 	public GameObject player;
 	public static PlayerState Instance;
 
 	void Awake ()   
 	{
+		//Hacemos singleton al jugador
 		if (Instance == null)
 		{
 			DontDestroyOnLoad(gameObject);
@@ -20,16 +22,18 @@ public class PlayerState : MonoBehaviour {
 			Destroy (gameObject);
 		}
 	}
-	// Use this for initialization
 	void Start () {
-		//Inicializa lo cargado
+		//Si la partida es cargada
 		if (!GlobalControl.Instance.isNewGame) {
+			//Pasamos al personaje los datos cargados.
 			savedPlayerStats = GlobalControl.Instance.savedPlayerStats;
-			player.GetComponent<PlayerState> ().savedPlayerStats = savedPlayerStats;
+			//Asignamos al objeto jugador la posición donde guardó
 			Vector3 posicionCargada = new Vector3 (savedPlayerStats.positionX, savedPlayerStats.positionY, 0);
 			player.transform.position = posicionCargada;
+			//Cargamos la cámara en la escena correspondiente
 			Camera.main.GetComponent<MainCamera> ().SetBound (GameObject.Find (savedPlayerStats.mapName));
 		} else {
+			//Si la partida es nueva, inicializamos todos los stats
 			savedPlayerStats.mapName = player.GetComponent<PlayerController>().initialMap.name;
 			//Esto se podrá optimizar por json o algo seguro. Solo son los de Isabelle.
 			savedPlayerStats.nameCharacter = "Isabelle";
