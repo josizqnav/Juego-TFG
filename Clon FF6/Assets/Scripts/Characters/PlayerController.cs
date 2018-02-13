@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour {
 
 	Animator anim;
 	Rigidbody2D rb2d;
-	Vector2 mov;
+	public Vector2 mov;
 	//Mapa donde comienza la escena
 	public GameObject initialMap;
 
@@ -22,9 +22,11 @@ public class PlayerController : MonoBehaviour {
 		rb2d = GetComponent<Rigidbody2D> ();
 		//Se establecen los límites de la cámara
 		Camera.main.GetComponent<MainCamera>().SetBound(initialMap);
+
 	}
 
 	void Update () {
+
 		//Se detecta el movimiento en el vector 2D creado
 		mov = new Vector2 (Input.GetAxisRaw ("Horizontal"),
 			Input.GetAxisRaw ("Vertical"));
@@ -43,4 +45,6 @@ public class PlayerController : MonoBehaviour {
 		//Se actualiza la posición al moverse
 		rb2d.MovePosition (rb2d.position + mov * speed * Time.deltaTime);
 	}
+		
+
 }

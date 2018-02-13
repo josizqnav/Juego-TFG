@@ -39,6 +39,9 @@ public class Warp : MonoBehaviour
         col.transform.position = target.transform.GetChild (0).transform.position;
 		Camera.main.GetComponent<MainCamera>().SetBound(targetMap);
 
+		//Actualizamos la zona en el estado del personaje. Quitar para la primera iteracción
+		col.GetComponent<PlayerState>().savedPlayerStats.mapName = targetMap.name;
+
 		//Deshacemos transición y habilitamos de nuevo al jugador
 		FadeOut ();
 		col.GetComponent<Animator> ().enabled = true;
