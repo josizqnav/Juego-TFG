@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Start () {
+		//Establecemos el componente animado y la colisión del jugador.
 		anim = GetComponent<Animator> ();
 		rb2d = GetComponent<Rigidbody2D> ();
 		//Se establecen los límites de la cámara
@@ -30,8 +31,9 @@ public class PlayerController : MonoBehaviour {
 		//Se detecta el movimiento en el vector 2D creado
 		mov = new Vector2 (Input.GetAxisRaw ("Horizontal"),
 			Input.GetAxisRaw ("Vertical"));
-
+		//Se comprueba si se está moviendo o no
 		if (mov != Vector2.zero) {
+			//Actualizamos las variables de la animación
 			anim.SetFloat ("movX", mov.x);
 			anim.SetFloat ("movY", mov.y);
 			anim.SetBool ("andando", true);
@@ -46,5 +48,4 @@ public class PlayerController : MonoBehaviour {
 		rb2d.MovePosition (rb2d.position + mov * speed * Time.deltaTime);
 	}
 		
-
 }

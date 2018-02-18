@@ -62,6 +62,7 @@ public class Warp : MonoBehaviour
 		tex = new Texture2D (1, 1);
 		tex.SetPixel (0, 0, Color.black);
 		tex.Apply ();
+		//Dibujamos la textura por pantalla
 		GUI.DrawTexture (new Rect (0, 0, Screen.width, Screen.height), tex);
 
 		//Cuando aparezca vamos subiendo la opacidad y cuando la deshagamos la vamos bajando hasta que acabe

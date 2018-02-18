@@ -1,0 +1,1084 @@
+fileFormatVersion: 2
+guid: 37f3f4bcad71130438b1378732bb03ac
+timeCreated: 1518783740
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: heroesRenderInvertido_0
+    21300002: heroesRenderInvertido_1
+    21300004: heroesRenderInvertido_2
+    21300006: heroesRenderInvertido_3
+    21300008: heroesRenderInvertido_4
+    21300010: heroesRenderInvertido_5
+    21300012: heroesRenderInvertido_6
+    21300014: heroesRenderInvertido_7
+    21300016: heroesRenderInvertido_8
+    21300018: heroesRenderInvertido_9
+    21300020: heroesRenderInvertido_10
+    21300022: heroesRenderInvertido_11
+    21300024: heroesRenderInvertido_12
+    21300026: heroesRenderInvertido_13
+    21300028: heroesRenderInvertido_14
+    21300030: heroesRenderInvertido_15
+    21300032: heroesRenderInvertido_16
+    21300034: heroesRenderInvertido_17
+    21300036: heroesRenderInvertido_18
+    21300038: heroesRenderInvertido_19
+    21300040: heroesRenderInvertido_20
+    21300042: heroesRenderInvertido_21
+    21300044: heroesRenderInvertido_22
+    21300046: heroesRenderInvertido_23
+    21300048: heroesRenderInvertido_24
+    21300050: heroesRenderInvertido_25
+    21300052: heroesRenderInvertido_26
+    21300054: heroesRenderInvertido_27
+    21300056: heroesRenderInvertido_28
+    21300058: heroesRenderInvertido_29
+    21300060: heroesRenderInvertido_30
+    21300062: heroesRenderInvertido_31
+    21300064: heroesRenderInvertido_32
+    21300066: heroesRenderInvertido_33
+    21300068: heroesRenderInvertido_34
+    21300070: heroesRenderInvertido_35
+    21300072: heroesRenderInvertido_36
+    21300074: heroesRenderInvertido_37
+    21300076: heroesRenderInvertido_38
+    21300078: heroesRenderInvertido_39
+    21300080: heroesRenderInvertido_40
+    21300082: heroesRenderInvertido_41
+    21300084: heroesRenderInvertido_42
+    21300086: heroesRenderInvertido_43
+    21300088: heroesRenderInvertido_44
+    21300090: heroesRenderInvertido_45
+    21300092: heroesRenderInvertido_46
+    21300094: heroesRenderInvertido_47
+    21300096: heroesRenderInvertido_48
+    21300098: heroesRenderInvertido_49
+    21300100: heroesRenderInvertido_50
+    21300102: heroesRenderInvertido_51
+    21300104: heroesRenderInvertido_52
+    21300106: heroesRenderInvertido_53
+    21300108: heroesRenderInvertido_54
+    21300110: heroesRenderInvertido_55
+    21300112: heroesRenderInvertido_56
+    21300114: heroesRenderInvertido_57
+    21300116: heroesRenderInvertido_58
+    21300118: heroesRenderInvertido_59
+    21300120: heroesRenderInvertido_60
+    21300122: heroesRenderInvertido_61
+    21300124: heroesRenderInvertido_62
+    21300126: heroesRenderInvertido_63
+    21300128: heroesRenderInvertido_64
+    21300130: heroesRenderInvertido_65
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 16
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: heroesRenderInvertido_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 261
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 261
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_2
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 261
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_3
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 261
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_4
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 261
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_5
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 261
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_6
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 261
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_7
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 261
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_8
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 261
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_9
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 229
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_10
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 229
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_11
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 229
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_12
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 229
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_13
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 229
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_14
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 229
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_15
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 229
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_16
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 229
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_17
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 229
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_18
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 197
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_19
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 197
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_20
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 197
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_21
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 197
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_22
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 197
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_23
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 197
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_24
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 197
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_25
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 197
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_26
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 197
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_27
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 165
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_28
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 165
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_29
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 165
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_30
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 165
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_31
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 165
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_32
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 165
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_33
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 165
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_34
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 165
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_35
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 165
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_36
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 135
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_37
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 135
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_38
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 135
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_39
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 135
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_40
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 135
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_41
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 135
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_42
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 135
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_43
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 136
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_44
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 135
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_45
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 134
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_46
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 103
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_47
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 103
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_48
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 103
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_49
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 103
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_50
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 103
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_51
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 103
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_52
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 104
+        width: 27
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_53
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 104
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_54
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 103
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_55
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 104
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_56
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 71
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_57
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 71
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_58
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 71
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_59
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 71
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_60
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 71
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_61
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 71
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_62
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 70
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_63
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 71
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_64
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 70
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: heroesRenderInvertido_65
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 70
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
