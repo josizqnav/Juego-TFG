@@ -285,7 +285,7 @@ MonoBehaviour:
   colors:
   - {r: 1, g: 1, b: 1, a: 0}
   - {r: 1, g: 1, b: 1, a: 1}
-  nameButtom: CambiarMenu
+  nameButtom: Condicion
   actualMenu: {fileID: 194128459}
   nextMenu: {fileID: 0}
 --- !u!1001 &122744127
@@ -1019,7 +1019,7 @@ MonoBehaviour:
   colors:
   - {r: 1, g: 1, b: 1, a: 0}
   - {r: 1, g: 1, b: 1, a: 1}
-  nameButtom: CambiarMenu
+  nameButtom: Magia
   actualMenu: {fileID: 194128459}
   nextMenu: {fileID: 0}
 --- !u!1 &589295295
@@ -1581,7 +1581,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 918701697}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 205, y: 158, z: 0}
+  m_LocalPosition: {x: 242.5, y: 158, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1795351552}
@@ -2330,7 +2330,7 @@ MonoBehaviour:
   colors:
   - {r: 1, g: 1, b: 1, a: 0}
   - {r: 1, g: 1, b: 1, a: 1}
-  nameButtom: CambiarMenu
+  nameButtom: Objetos
   actualMenu: {fileID: 194128459}
   nextMenu: {fileID: 0}
 --- !u!1 &1369114100
@@ -2623,7 +2623,7 @@ MonoBehaviour:
   colors:
   - {r: 1, g: 1, b: 1, a: 0}
   - {r: 0.99264705, g: 0.99264705, b: 0.99264705, a: 1}
-  nameButtom: CambiarMenu
+  nameButtom: Guardar
   actualMenu: {fileID: 194128459}
   nextMenu: {fileID: 1997817374}
 --- !u!1 &1484416895
@@ -2931,7 +2931,7 @@ MonoBehaviour:
   colors:
   - {r: 1, g: 1, b: 1, a: 0}
   - {r: 1, g: 1, b: 1, a: 1}
-  nameButtom: CambiarMenu
+  nameButtom: Equipo
   actualMenu: {fileID: 194128459}
   nextMenu: {fileID: 0}
 --- !u!1 &1734767137

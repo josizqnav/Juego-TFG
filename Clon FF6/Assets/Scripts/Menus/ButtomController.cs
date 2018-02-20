@@ -31,8 +31,9 @@ public class ButtomController : MonoBehaviour {
 			if (Input.GetKeyDown (KeyCode.Z) && nameButtom=="NuevoJuego") {
 				SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex +1);
 			}
-			//Si elegimos cargar o volver, desactivamos el menú actual y activamos el otro
-			if (Input.GetKeyDown (KeyCode.Z) && nameButtom=="CambiarMenu") {
+			//Cambiamos de menú según los siguientes botones
+			if (Input.GetKeyDown (KeyCode.Z) && (nameButtom=="CambiarMenu" || nameButtom=="Condicion"
+				|| nameButtom=="Equipo" || nameButtom=="Objetos" || nameButtom=="Magia" || nameButtom=="Guardar")) {
 				actualMenu.SetActive (false);
 				nextMenu.SetActive(true);
 			}
@@ -41,7 +42,7 @@ public class ButtomController : MonoBehaviour {
 				Debug.Log ("Salir del juego");
 				Application.Quit ();
 			}
-			if (Input.GetKeyDown (KeyCode.Z) && nameButtom=="VolverJuego") {
+			if ((Input.GetKeyDown (KeyCode.Z) || Input.GetKeyDown (KeyCode.X)) && nameButtom=="VolverJuego") {
 				actualMenu.SetActive (false);
 				nextMenu.GetComponent<Animator> ().enabled = true;
 				nextMenu.GetComponent<PlayerController> ().enabled = true;
@@ -57,6 +58,14 @@ public class ButtomController : MonoBehaviour {
 				   || nameButtom == "VolverMenuP") {
 					actualMenu.SetActive (false);
 					nextMenu.SetActive (true);
+				}
+				if (nameButtom=="Condicion" || nameButtom=="Guardar"
+					|| nameButtom=="Equipo" || nameButtom=="Objetos" || nameButtom=="Magia" ) {
+					//Accedemos al padre del padre: SubmenúComandos < Panel< MenuJugador. Y desactivamos menú
+					actualMenu.transform.parent.parent.gameObject.SetActive (false);
+					//Reactivamos al jugador.
+					PlayerState.Instance.GetComponent<Animator> ().enabled = true;
+					PlayerState.Instance.GetComponent<PlayerController> ().enabled = true;
 				}
 			}//Distintas ranuras para cargar la partida
 			if (Input.GetKeyDown (KeyCode.Z) && nameButtom=="Cargar1") {

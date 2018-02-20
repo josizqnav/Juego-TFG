@@ -41,6 +41,7 @@ public class GlobalControl : MonoBehaviour {
 			Directory.CreateDirectory("Saves");
 		//Creamos el fichero a guardar, puede tener la extención que se desee
 		FileStream file = File.Create(nameSave);
+		//Guarda los datos en el archivo creado
 		bf.Serialize(file, saveData);
 		//Importante cerrarlo siempre que hayamos serializado
 		file.Close();
@@ -52,7 +53,7 @@ public class GlobalControl : MonoBehaviour {
 		if (File.Exists (nameSave)) {
 			//Se inicia el cargado de partida, el juego no será nuevo por tanto
 			isNewGame = false;
-			//Descerializamos el archivo y lo guardamos en una variable
+			//Deserializamos el archivo y lo guardamos en una variable
 			BinaryFormatter bf = new BinaryFormatter();
 			FileStream file = File.Open(nameSave, FileMode.Open);
 			PlayerStats saveData = (PlayerStats)bf.Deserialize(file);

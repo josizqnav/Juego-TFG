@@ -325,8 +325,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 122671773}
-  - component: {fileID: 122671772}
-  - component: {fileID: 122671771}
   - component: {fileID: 122671770}
   m_Layer: 0
   m_Name: GlobalObject
@@ -361,28 +359,6 @@ MonoBehaviour:
     magic: 0
     nextLvl: 0
   isNewGame: 1
---- !u!114 &122671771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 122671769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d01d4fa83df8b2f4498bac39d50f3f12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &122671772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 122671769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efa5756a05a3a114aa99bd01a188a153, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &122671773
 Transform:
   m_ObjectHideFlags: 0
@@ -1156,7 +1132,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 739767295}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 218, y: 159, z: 0}
+  m_LocalPosition: {x: 242.5, y: 158, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1234795873}

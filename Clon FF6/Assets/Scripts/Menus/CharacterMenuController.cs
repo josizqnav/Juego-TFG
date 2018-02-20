@@ -3,20 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMenuController : MonoBehaviour {
-
+	//Si el juego está pausado
 	public static bool GameIsPaused = false;
-
+	//Objeto Menú
 	public GameObject characterMenu;
 
 	public GameObject player;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
 	void Update () {
+		//Si pulsamos la tecla Escape y el juego está pausado, se reaunuda, si no, se pausa
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			if (GameIsPaused) {
 				Resume ();
@@ -27,13 +22,15 @@ public class CharacterMenuController : MonoBehaviour {
 	}
 
 	void Resume(){
+		//Desactivamos el menú y reactivamos al jugador
 		characterMenu.SetActive (false);
 		GameIsPaused = false;
 		player.GetComponent<Animator> ().enabled = true;
 		player.GetComponent<PlayerController> ().enabled = true;
 	}
 
-	public void Pause(){
+	void Pause(){
+		//Activamos el menú y desactivamos al jugador
 		characterMenu.SetActive (true);
 		GameIsPaused = true;
 		player.GetComponent<Animator> ().enabled = false;
