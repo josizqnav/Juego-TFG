@@ -7,7 +7,8 @@ public class CharacterMenuController : MonoBehaviour {
 	public static bool GameIsPaused = false;
 	//Objeto Menú
 	public GameObject characterMenu;
-
+	public GameObject submenuCommandos;
+	public GameObject submenuPlayers;
 	public GameObject player;
 
 	void Update () {
@@ -32,6 +33,9 @@ public class CharacterMenuController : MonoBehaviour {
 	void Pause(){
 		//Activamos el menú y desactivamos al jugador
 		characterMenu.SetActive (true);
+		//Nos aseguramos de que esta activado el menú comandos y no el de elección de PJ
+		submenuCommandos.GetComponent<MainMenuController> ().enabled = true;
+		submenuPlayers.GetComponent<MainMenuControllerPlus> ().enabled = false;
 		GameIsPaused = true;
 		player.GetComponent<Animator> ().enabled = false;
 		player.GetComponent<PlayerController> ().enabled = false;

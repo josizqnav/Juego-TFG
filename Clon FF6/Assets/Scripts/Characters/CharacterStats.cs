@@ -7,7 +7,8 @@ public class CharacterStats {
 	public int sceneID;
 	public float positionX, positionY;
 	public string nameCharacter;
-	public float vitality;
+	public float maxVitality;
+	public float actualVitality;
 	public float strength;
 	public float defense;
 	public float speed;
@@ -18,7 +19,8 @@ public class CharacterStats {
 		this.positionX = 0;
 		this.positionY = 0;
 		this.nameCharacter = "";
-		this.vitality = 0;
+		this.maxVitality = 0;
+		this.actualVitality = 0;
 		this.strength = 0;
 		this.defense = 0;
 		this.speed = 0;

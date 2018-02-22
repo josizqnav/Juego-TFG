@@ -38,8 +38,10 @@ public class PlayerState : MonoBehaviour {
 			//Esto se podrá optimizar por json o algo seguro. Solo son los de Isabelle.
 			savedPlayerStats.nameCharacter = "Isabelle";
 			savedPlayerStats.level = 1;
-			savedPlayerStats.vitality = 53;
-			savedPlayerStats.magicPoints = 5;
+			savedPlayerStats.maxVitality = 53;
+			savedPlayerStats.actualVitality = 53;
+			savedPlayerStats.maxMagicPoints = 5;
+			savedPlayerStats.actualMagicPoints = 5;
 			savedPlayerStats.strength = 40;
 			savedPlayerStats.defense = 48;
 			savedPlayerStats.magic = 25;
