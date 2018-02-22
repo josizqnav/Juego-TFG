@@ -10,6 +10,7 @@ public class PlayerStats : CharacterStats {
 	public float actualMagicPoints;
 	public float magic;
 	public float nextLvl;
+	public float actualExp;
 
 	public PlayerStats () {
 		this.level = 0;
@@ -17,5 +18,6 @@ public class PlayerStats : CharacterStats {
 		this.actualMagicPoints = 0;
 		this.magic = 0;
 		this.nextLvl = 0;
+		this.actualExp = 0;
 	}
 }

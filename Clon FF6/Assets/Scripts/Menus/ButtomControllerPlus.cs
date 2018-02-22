@@ -9,9 +9,16 @@ public class ButtomControllerPlus : ButtomController {
 	void FixedUpdate () {
 		if (selected) {
 			ImageButtom.color = colors [1];
-			//Seleccionamos el personaje deseado
+			//Seleccionamos el personaje 1
 			if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "Personaje1") {
-				
+				actualMenu.transform.parent.gameObject.SetActive (false);
+				nextMenu.SetActive (true);
+				nextMenu.GetComponent<CheckMenuCondition> ().isIsabelle = true;
+			}
+			if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "Personaje2") {
+				actualMenu.transform.parent.gameObject.SetActive (false);
+				nextMenu.SetActive (true);
+				nextMenu.GetComponent<CheckMenuCondition> ().isIsabelle = false;
 			}
 			//Si pulsamos X
 			if (Input.GetKeyDown (KeyCode.X) && (nameButtom=="Personaje1" ||
@@ -26,18 +33,7 @@ public class ButtomControllerPlus : ButtomController {
 				menu.enabled = false;
 				otherMenu.GetComponent<MainMenuController> ().enabled = true;
 				//Seleccionamos Condicion
-				otherMenu.transform.Find ("BotonCondicion").GetComponent<ButtomController> ().selected = true;
-			}
-			//Cuando se pulse Esc
-			if (Input.GetKeyDown (KeyCode.Escape)) {
-				//Deseleccionamos el boton y seleccionamos condición para que vuelva a iniciarse por defecto
-				this.selected = false;
-				//Ponemos por defecto el menu personaje
-				MainMenuControllerPlus menu = actualMenu.GetComponent<MainMenuControllerPlus>();
-				menu.isCondition = false;
-				menu.isEquipment = false;
-				menu.isMagic = false;
-				otherMenu.transform.Find ("BotonCondicion").GetComponent<ButtomController> ().selected = true;
+				otherMenu.transform.Find ("BotonCondicion").gameObject.SetActive(true);
 			}
 		} else {
 			ImageButtom.color = colors [0];

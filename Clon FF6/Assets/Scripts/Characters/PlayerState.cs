@@ -47,6 +47,7 @@ public class PlayerState : MonoBehaviour {
 			savedPlayerStats.magic = 25;
 			savedPlayerStats.speed = 28;
 			savedPlayerStats.nextLvl = 32;
+			savedPlayerStats.actualExp = 0;
 		}
 	}
 

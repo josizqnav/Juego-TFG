@@ -88,7 +88,7 @@ public class ButtomController : MonoBehaviour {
 			//Si elegimos condición
 			if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "Condicion") {
 				//Deseleccionamos el botón y desactivamos el menú
-				this.selected = false;
+				actualMenu.transform.Find("BotonCondicion").gameObject.SetActive(false);
 				actualMenu.GetComponent<MainMenuController> ().enabled = false;
 				//Activamos el menu selector de pjs y lo ponemos en modo condicion
 				MainMenuControllerPlus menu = nextMenu.GetComponent<MainMenuControllerPlus> ();
