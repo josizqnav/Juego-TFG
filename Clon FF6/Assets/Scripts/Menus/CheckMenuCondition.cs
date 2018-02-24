@@ -12,11 +12,14 @@ public class CheckMenuCondition : MonoBehaviour {
 
 
 	void FixedUpdate () {
+		//Si el personaje es Isabelle
 		if (isIsabelle) {
+			//Si pulsamos X volvemos al menu anterior
 			if (Input.GetKeyDown (KeyCode.X)) {
 				actualMenu.SetActive (false);
 				nextMenu.SetActive(true);
 			}
+			//Activamos la imagen correspondiende y añadimos el valor adecuado a los atributos
 			imageP1.gameObject.SetActive (true);
 			imageP2.gameObject.SetActive(false);
 			nv.text = PlayerState.Instance.savedPlayerStats.level.ToString();
@@ -31,7 +34,8 @@ public class CheckMenuCondition : MonoBehaviour {
 			magic.text = PlayerState.Instance.savedPlayerStats.magic.ToString ();
 			speed.text = PlayerState.Instance.savedPlayerStats.speed.ToString ();
 			name1.text = PlayerState.Instance.savedPlayerStats.nameCharacter;
-		} else {
+		}//Si el personaje es Marlon 
+		else {
 			if (Input.GetKeyDown (KeyCode.X)) {
 				actualMenu.SetActive (false);
 				nextMenu.SetActive(true);

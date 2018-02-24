@@ -7,6 +7,7 @@ public class CheckSelectorPj : MonoBehaviour {
 	public Text name1, nv1, vt1, pm1;
 
 	void Start () {
+		//Le damos los valores reales a los atributos de Isabelle
 		name1.text = PlayerState.Instance.savedPlayerStats.nameCharacter;
 		nv1.text = PlayerState.Instance.savedPlayerStats.level.ToString();
 		vt1.text = PlayerState.Instance.savedPlayerStats.actualVitality + " / " +
