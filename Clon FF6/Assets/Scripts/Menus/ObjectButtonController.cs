@@ -12,27 +12,26 @@ public class ObjectButtonController : MonoBehaviour {
 	//Texto que tendrá el botón
 	public Text textObject;
 
-
-	private CheckScrollObjects scrollObject;
 	// Inicializamos la imagen y los colores
 	void Start () {
 		ImageButtom = GetComponent<Image> ();
 		ImageButtom.color = colors [0];
 	}
-	
-	// Update is called once per frame
+
 	void FixedUpdate () {
 		if (selected) {
 			ImageButtom.color = colors [1];
+			//Si pulsamos X volveremos al menú anterior
 			if (Input.GetKeyDown (KeyCode.X)) {
 				GameObject.Find ("SubmenuObjetos").SetActive (false);
+				//No buscamos directamente el menú anterior porque solo podemos buscar GameObjects activos
 				GameObject.Find ("MenuJugador").transform.GetChild (0).GetChild (0).gameObject.SetActive (true);
 			}
 		} else {
 			ImageButtom.color = colors [0];
 		}
 	}
-
+	//Le damos el texto adecuado al botón
 	public void Setup (ObjectStats object1){
 		textObject.text = object1.nameObject + "\tx" + object1.num;
 	}

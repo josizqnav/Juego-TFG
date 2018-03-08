@@ -3,34 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SimpleObjectPool : MonoBehaviour {
+	//Objeto prefabricado
 	public GameObject prefab;
+	//Grupo de objetos inactivos, guardado en una colección LIFO
 	private Stack<GameObject> inactiveInstances = new Stack<GameObject>();
 
 	public GameObject GetObject() 
 	{
 		GameObject spawnedGameObject;
 
-		// if there is an inactive instance of the prefab ready to return, return that
+		// Si tenemos un objeto inactivo  listo, la devolvemos
 		if (inactiveInstances.Count > 0) 
 		{
-			// remove the instance from the collection of inactive instances
+			// Borramos el objetvo inactivo
 			spawnedGameObject = inactiveInstances.Pop();
 		}
-		// otherwise, create a new instance
+		// En otro caso crearemos un nuevo objeto
 		else 
 		{
+			//Creamos el objeto con nuestro prefabricado
 			spawnedGameObject = (GameObject)GameObject.Instantiate(prefab);
 
-			// add the PooledObject component to the prefab so we know it came from this pool
+			// Le agregamos PooledObject como componente para saber que pertenece al grupo
 			PooledObject pooledObject = spawnedGameObject.AddComponent<PooledObject>();
 			pooledObject.pool = this;
 		}
 
-		// put the instance in the root of the scene and enable it
+		// Colocamos el objeto en la raíz de la escena y lo activamos
 		spawnedGameObject.transform.SetParent(null);
 		spawnedGameObject.SetActive(true);
 
-		// return a reference to the instance
+		// Devolvemos el objeto
 		return spawnedGameObject;
 	}
 	
@@ -38,25 +41,25 @@ public class SimpleObjectPool : MonoBehaviour {
 	{
 		PooledObject pooledObject = toReturn.GetComponent<PooledObject>();
 
-		// if the instance came from this pool, return it to the pool
+		// Si el objeto proviene del grupo, lo devolvemos
 		if(pooledObject != null && pooledObject.pool == this)
 		{
-			// make the instance a child of this and disable it
+			// Hamos al objeto hijo y lo deshabilitamos
 			toReturn.transform.SetParent(transform);
 			toReturn.SetActive(false);
 
-			// add the instance to the collection of inactive instances
+			// Añadimos el objeto a la colección de instancias inactivas
 			inactiveInstances.Push(toReturn);
 		}
-		// otherwise, just destroy it
+		// En cualquier otro caso, destruímos el objeto
 		else
 		{
-			Debug.LogWarning(toReturn.name + " was returned to a pool it wasn't spawned from! Destroying.");
+			Debug.LogWarning(toReturn.name + " fue devuelto a un grupo del que no se generó. Destruído.");
 			Destroy(toReturn);
 		}
 	}
 }
-
+// Se usa para identificar el grupo(pool) del que proviene el GameObject
 public class PooledObject : MonoBehaviour
 {
 	public SimpleObjectPool pool;
