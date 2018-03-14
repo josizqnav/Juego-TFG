@@ -98,6 +98,41 @@ public class ButtomController : MonoBehaviour {
 				//Ponemos como seleccionado el primer botón
 				GameObject.Find ("BotonPersonaje1").GetComponent<ButtomController>().selected = true;
 			}
+			//Si elegimos equipo
+			if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "Equipo") {
+				//Deseleccionamos el botón y desactivamos el menú
+				actualMenu.transform.Find("BotonEquipo").gameObject.SetActive(false);
+				actualMenu.GetComponent<MainMenuController> ().enabled = false;
+				//Activamos el menu selector de pjs y lo ponemos en modo condicion
+				MainMenuControllerPlus menu = nextMenu.GetComponent<MainMenuControllerPlus> ();
+				menu.enabled = true;
+				menu.isEquipment = true;
+				menu.position = 0;
+				//Ponemos como seleccionado el primer botón
+				GameObject.Find ("BotonPersonaje1").GetComponent<ButtomController>().selected = true;
+			}
+			//Si elegimos Arma
+			if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "Arma") {
+				//Deseleccionamos el botón y desactivamos el menú
+				actualMenu.transform.Find("BotonArma").gameObject.GetComponent<ButtomController>().selected = false;
+				actualMenu.GetComponent<MainMenuController> ().enabled = false;
+				//Activamos el menu selector
+				nextMenu.SetActive(true);
+				//Creamos los botones
+				CheckScrollEquipment checkScrollEquipment = nextMenu.transform.GetChild(0).GetChild(0).gameObject.GetComponent<CheckScrollEquipment>();
+				checkScrollEquipment.RefreshWeapons ();
+			}
+			//Si elegimos Armadura
+			if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "Armadura") {
+				//Deseleccionamos el botón y desactivamos el menú
+				actualMenu.transform.Find("BotonArmadura").gameObject.GetComponent<ButtomController>().selected = false;
+				actualMenu.GetComponent<MainMenuController> ().enabled = false;
+				//Activamos el menu selector
+				nextMenu.SetActive(true);
+				//Creamos los botones
+				CheckScrollEquipment checkScrollEquipment = nextMenu.transform.GetChild(0).GetChild(0).gameObject.GetComponent<CheckScrollEquipment>();
+				checkScrollEquipment.RefreshArmors ();
+			}
 		} else {
 			ImageButtom.color = colors [0];
 		}

@@ -7,6 +7,8 @@ public class PlayerState : MonoBehaviour {
 	//los stats del personaje
 	public PlayerStats savedPlayerStats;
 	public List<ObjectStats> savedObjectStats;
+	public List<EquipmentStats> savedEquipmentStats;
+	public PlayerEquipment savedPlayerEquipment = new PlayerEquipment ();
 	public GameObject player;
 	public static PlayerState Instance;
 
@@ -36,6 +38,7 @@ public class PlayerState : MonoBehaviour {
 		} else {
 			initiatePlayers ();
 			initiateObjects ();
+			initiateEquipment ();
 		}
 	}
 
@@ -169,5 +172,25 @@ public class PlayerState : MonoBehaviour {
 		savedObjectStats.Add (object7); savedObjectStats.Add (object8); savedObjectStats.Add (object9);
 		savedObjectStats.Add (object10); savedObjectStats.Add (object11); savedObjectStats.Add (object12);
 		savedObjectStats.Add (object13); savedObjectStats.Add (object14);
+	}
+
+	public void initiateEquipment(){
+		EquipmentStats equipment1 = new EquipmentStats ();
+		equipment1.nameObject = "Espada corta";
+		equipment1.description = "Espada de poco tamaño y fácil manejabilidad que no hace gran daño";
+		equipment1.typeEquipment = TypeEquipment.Weapon;
+		equipment1.buffs.Add (new Buff ("strength", 18));
+		equipment1.inUse = false;
+		equipment1.user = "Isabelle";
+
+		EquipmentStats equipment2 = new EquipmentStats ();
+		equipment2.nameObject = "Chaleco de cuero";
+		equipment2.description = "Chaleco hecho de cuero que sirve de protección contra ataques débiles";
+		equipment2.typeEquipment = TypeEquipment.Armor;
+		equipment2.buffs.Add (new Buff ("defense", 16));
+		equipment2.inUse = false;
+		equipment2.user = "All";
+
+		savedEquipmentStats.Add (equipment1); savedEquipmentStats.Add (equipment2);
 	}
 }
