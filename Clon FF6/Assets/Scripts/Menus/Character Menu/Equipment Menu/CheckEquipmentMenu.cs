@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CheckEquipmentMenu : MonoBehaviour {
-	public Text weaponText, armorText, strengthPrev, defensePrev, magicPrev, speedPrev, 
-	strengthNext, defenseNext, magicNext, speedNext;
+	public Text weaponText, armorText, strengthPrev, defensePrev, magicPrev, speedPrev;
 	public Image imageP1, imageP2;
 	public bool isIsabelle;
 

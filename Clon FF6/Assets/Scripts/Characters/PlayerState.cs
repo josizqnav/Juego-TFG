@@ -191,6 +191,22 @@ public class PlayerState : MonoBehaviour {
 		equipment2.inUse = false;
 		equipment2.user = "All";
 
-		savedEquipmentStats.Add (equipment1); savedEquipmentStats.Add (equipment2);
+		EquipmentStats equipment3 = new EquipmentStats ();
+		equipment3.nameObject = "Espada mediana";
+		equipment3.description = "Espada de poco tamaño y fácil manejabilidad que no hace gran daño";
+		equipment3.typeEquipment = TypeEquipment.Weapon;
+		equipment3.buffs.Add (new Buff ("speed", 30));
+		equipment3.inUse = false;
+		equipment3.user = "Isabelle";
+
+		EquipmentStats equipment4 = new EquipmentStats ();
+		equipment4.nameObject = "Espada larga";
+		equipment4.description = "Espada de poco tamaño y fácil manejabilidad que no hace gran daño";
+		equipment4.typeEquipment = TypeEquipment.Weapon;
+		equipment4.buffs.Add (new Buff ("strength", 20)); equipment4.buffs.Add (new Buff ("defense", 20));
+		equipment4.inUse = false;
+		equipment4.user = "Isabelle";
+
+		savedEquipmentStats.Add (equipment1); savedEquipmentStats.Add (equipment2);savedEquipmentStats.Add (equipment3); savedEquipmentStats.Add (equipment4);
 	}
 }

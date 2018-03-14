@@ -12,6 +12,7 @@ public class EquipmentButtonController : MonoBehaviour {
 	public Color[] colors;
 	//Texto que tendrá el botón
 	public Text textEquipment;
+	public EquipmentStats equipmentStats;
 
 	// Inicializamos la imagen y los colores
 	void Start () {
@@ -24,7 +25,10 @@ public class EquipmentButtonController : MonoBehaviour {
 		if (selected) {
 			ImageButtom.color = colors [1];
 			if (Input.GetKeyDown (KeyCode.X)) {
-				GameObject.Find ("ScrollEquipo").SetActive (false);
+				selected = false;
+				GameObject actualMenu = GameObject.Find ("ScrollEquipo");
+				actualMenu.GetComponent<MenuEquipmentController> ().position = 0;
+				actualMenu.SetActive (false);
 				GameObject baseMenu = GameObject.Find ("PanelRaizEquipo");
 				baseMenu.transform.Find("BotonArma").gameObject.GetComponent<ButtomController>().selected = true;
 				baseMenu.GetComponent<MainMenuController> ().enabled = true;
@@ -38,5 +42,6 @@ public class EquipmentButtonController : MonoBehaviour {
 	//Le damos el texto adecuado al botón
 	public void SetupEquipment (EquipmentStats equipment){
 		textEquipment.text = equipment.nameObject;
+		equipmentStats = equipment;
 	}
 }

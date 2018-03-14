@@ -100,8 +100,12 @@ public class ButtomController : MonoBehaviour {
 			}
 			//Si elegimos equipo
 			if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "Equipo") {
-				//Deseleccionamos el botón y desactivamos el menú
-				actualMenu.transform.Find("BotonEquipo").gameObject.SetActive(false);
+				//Deseleccionamos el botón y dejamos por defecto seleccionado condicion, desactivamos el menú
+				actualMenu.transform.Find("BotonEquipo").gameObject.GetComponent<ButtomController>().selected = false;
+				actualMenu.GetComponent<MainMenuController> ().position = 0;
+				GameObject buttonCondition = GameObject.Find ("BotonCondicion"); 
+				buttonCondition.GetComponent<ButtomController> ().selected = true;
+				buttonCondition.SetActive (false);
 				actualMenu.GetComponent<MainMenuController> ().enabled = false;
 				//Activamos el menu selector de pjs y lo ponemos en modo condicion
 				MainMenuControllerPlus menu = nextMenu.GetComponent<MainMenuControllerPlus> ();
@@ -132,6 +136,13 @@ public class ButtomController : MonoBehaviour {
 				//Creamos los botones
 				CheckScrollEquipment checkScrollEquipment = nextMenu.transform.GetChild(0).GetChild(0).gameObject.GetComponent<CheckScrollEquipment>();
 				checkScrollEquipment.RefreshArmors ();
+			}
+			//Si pulsamos X en el Submenú Equipo
+			if (Input.GetKeyDown (KeyCode.X) && (nameButtom == "Armadura" || nameButtom == "Arma")) {
+				//Desactivamos el submenu equipo al completo
+				actualMenu.transform.parent.gameObject.SetActive (false);
+				//Activamos el menu raiz
+				GameObject.Find ("MenuJugador").transform.GetChild (0).GetChild (0).gameObject.SetActive (true);
 			}
 		} else {
 			ImageButtom.color = colors [0];
