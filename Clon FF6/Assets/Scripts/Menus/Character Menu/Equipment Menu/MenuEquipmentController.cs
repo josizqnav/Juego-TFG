@@ -9,10 +9,10 @@ public class MenuEquipmentController : MonoBehaviour {
 	public int position = 0;
 	//Para controlar la barra
 	public Scrollbar scrollRect;
-	public Text strengthNext, defenseNext, magicNext, speedNext;
+	public Text strengthNext, defenseNext, magicNext, speedNext, descriptionText;
 
 	void FixedUpdate(){
-		if (Input.GetKeyDown (KeyCode.X)) {
+		if (Input.GetKeyDown (KeyCode.X) || Input.GetKeyDown (KeyCode.Z)) {
 			strengthNext.text = "";
 			defenseNext.text = "";
 			magicNext.text = "";
@@ -77,6 +77,7 @@ public class MenuEquipmentController : MonoBehaviour {
 
 	private void controlNextStats(){
 		EquipmentStats equipmentStats = buttons [position].equipmentStats;
+		descriptionText.text = equipmentStats.description;
 		strengthNext.text = PlayerState.Instance.savedPlayerStats.strength.ToString();
 		defenseNext.text = PlayerState.Instance.savedPlayerStats.defense.ToString();
 		magicNext.text = PlayerState.Instance.savedPlayerStats.magic.ToString();
@@ -87,19 +88,19 @@ public class MenuEquipmentController : MonoBehaviour {
 		speedNext.color = Color.white;
 		foreach (Buff buff in equipmentStats.buffs) {
 			if (buff.attribute == "strength") {
-				strengthNext.text = (PlayerState.Instance.savedPlayerStats.strength + buff.improvement).ToString ();
+				strengthNext.text = (PlayerState.Instance.savedBasePlayerStats.strength + buff.improvement).ToString ();
 				strengthNext.color = Color.cyan;
 			}
 			if (buff.attribute == "defense") {
-				defenseNext.text = (PlayerState.Instance.savedPlayerStats.defense + buff.improvement).ToString ();
+				defenseNext.text = (PlayerState.Instance.savedBasePlayerStats.defense + buff.improvement).ToString ();
 				defenseNext.color = Color.cyan;
 			}
 			if (buff.attribute == "magic") {
-				magicNext.text = (PlayerState.Instance.savedPlayerStats.magic + buff.improvement).ToString ();
+				magicNext.text = (PlayerState.Instance.savedBasePlayerStats.magic + buff.improvement).ToString ();
 				magicNext.color = Color.cyan;
 			}
 			if (buff.attribute == "speed") {
-				speedNext.text = (PlayerState.Instance.savedPlayerStats.speed + buff.improvement).ToString ();
+				speedNext.text = (PlayerState.Instance.savedBasePlayerStats.speed + buff.improvement).ToString ();
 				speedNext.color = Color.cyan;
 			}
 		}

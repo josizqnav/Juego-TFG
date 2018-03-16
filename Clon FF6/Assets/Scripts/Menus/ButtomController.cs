@@ -120,22 +120,34 @@ public class ButtomController : MonoBehaviour {
 				//Deseleccionamos el botón y desactivamos el menú
 				actualMenu.transform.Find("BotonArma").gameObject.GetComponent<ButtomController>().selected = false;
 				actualMenu.GetComponent<MainMenuController> ().enabled = false;
-				//Activamos el menu selector
-				nextMenu.SetActive(true);
 				//Creamos los botones
 				CheckScrollEquipment checkScrollEquipment = nextMenu.transform.GetChild(0).GetChild(0).gameObject.GetComponent<CheckScrollEquipment>();
 				checkScrollEquipment.RefreshWeapons ();
+				if (checkScrollEquipment.buttons.Count == 0) {
+					GameObject noEquipmentPanel = actualMenu.transform.Find ("AvisoNoEquipamiento").gameObject;
+					noEquipmentPanel.SetActive (true);
+					noEquipmentPanel.GetComponent<NoEquipmentController> ().isWeapon = true;
+				} else {
+					//Activamos el menu selector
+					nextMenu.SetActive(true);
+				}
 			}
 			//Si elegimos Armadura
 			if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "Armadura") {
 				//Deseleccionamos el botón y desactivamos el menú
 				actualMenu.transform.Find("BotonArmadura").gameObject.GetComponent<ButtomController>().selected = false;
 				actualMenu.GetComponent<MainMenuController> ().enabled = false;
-				//Activamos el menu selector
-				nextMenu.SetActive(true);
 				//Creamos los botones
 				CheckScrollEquipment checkScrollEquipment = nextMenu.transform.GetChild(0).GetChild(0).gameObject.GetComponent<CheckScrollEquipment>();
 				checkScrollEquipment.RefreshArmors ();
+				if (checkScrollEquipment.buttons.Count == 0) {
+					GameObject noEquipmentPanel = actualMenu.transform.Find ("AvisoNoEquipamiento").gameObject;
+					noEquipmentPanel.SetActive (true);
+					noEquipmentPanel.GetComponent<NoEquipmentController> ().isWeapon = false;
+				} else {
+					//Activamos el menu selector
+					nextMenu.SetActive(true);
+				}
 			}
 			//Si pulsamos X en el Submenú Equipo
 			if (Input.GetKeyDown (KeyCode.X) && (nameButtom == "Armadura" || nameButtom == "Arma")) {

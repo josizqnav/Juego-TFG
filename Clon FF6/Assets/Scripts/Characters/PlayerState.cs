@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerState : MonoBehaviour {
 	//los stats del personaje
 	public PlayerStats savedPlayerStats;
+	//Stats sin los buffos de armas
+	public PlayerStats savedBasePlayerStats;
 	public List<ObjectStats> savedObjectStats;
 	public List<EquipmentStats> savedEquipmentStats;
 	public PlayerEquipment savedPlayerEquipment = new PlayerEquipment ();
@@ -65,6 +67,19 @@ public class PlayerState : MonoBehaviour {
 		savedPlayerStats.speed = 28;
 		savedPlayerStats.nextLvl = 32;
 		savedPlayerStats.actualExp = 0;
+
+		savedBasePlayerStats.nameCharacter = "Isabelle";
+		savedBasePlayerStats.level = 1;
+		savedBasePlayerStats.maxVitality = 53;
+		savedBasePlayerStats.actualVitality = 53;
+		savedBasePlayerStats.maxMagicPoints = 5;
+		savedBasePlayerStats.actualMagicPoints = 5;
+		savedBasePlayerStats.strength = 40;
+		savedBasePlayerStats.defense = 48;
+		savedBasePlayerStats.magic = 25;
+		savedBasePlayerStats.speed = 28;
+		savedBasePlayerStats.nextLvl = 32;
+		savedBasePlayerStats.actualExp = 0;
 	}
 
 	private void initiateObjects(){
@@ -193,7 +208,7 @@ public class PlayerState : MonoBehaviour {
 
 		EquipmentStats equipment3 = new EquipmentStats ();
 		equipment3.nameObject = "Espada mediana";
-		equipment3.description = "Espada de poco tamaño y fácil manejabilidad que no hace gran daño";
+		equipment3.description = "Espada de mediano tamaño que hace algo de daño";
 		equipment3.typeEquipment = TypeEquipment.Weapon;
 		equipment3.buffs.Add (new Buff ("speed", 30));
 		equipment3.inUse = false;
@@ -201,7 +216,7 @@ public class PlayerState : MonoBehaviour {
 
 		EquipmentStats equipment4 = new EquipmentStats ();
 		equipment4.nameObject = "Espada larga";
-		equipment4.description = "Espada de poco tamaño y fácil manejabilidad que no hace gran daño";
+		equipment4.description = "Espada de gran tamaño que hace un daño considerable";
 		equipment4.typeEquipment = TypeEquipment.Weapon;
 		equipment4.buffs.Add (new Buff ("strength", 20)); equipment4.buffs.Add (new Buff ("defense", 20));
 		equipment4.inUse = false;
