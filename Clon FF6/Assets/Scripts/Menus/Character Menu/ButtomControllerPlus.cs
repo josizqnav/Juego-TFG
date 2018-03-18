@@ -6,6 +6,7 @@ public class ButtomControllerPlus : ButtomController {
 	
 	public GameObject conditionMenu;
 	public GameObject equipmentMenu;
+	public GameObject magicMenu;
 	public MainMenuControllerPlus menuSeleccion;
 
 	void FixedUpdate () {
@@ -54,8 +55,27 @@ public class ButtomControllerPlus : ButtomController {
 				if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "Personaje2") {
 					actualMenu.transform.parent.gameObject.SetActive (false);
 					equipmentMenu.SetActive (true);
-					//Accedemos a los stats de Morgan
+					//Accedemos a los stats de Marlon
 					equipmentMenu.GetComponent<CheckEquipmentMenu> ().isIsabelle = false;
+				}
+			}
+			if (menuSeleccion.isMagic) {
+				if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "Personaje1") {
+					//Desactivamos el menú raiz al completo (selector de pjs y comandos)
+					actualMenu.transform.parent.gameObject.SetActive (false);
+					magicMenu.SetActive (true);
+					//Accedemos a los stats de Isabelle
+					magicMenu.GetComponent<CheckMagicMenu> ().isIsabelle = true;
+					//Creamos los botones
+					CheckScrollMagic checkScrollMagic = magicMenu.transform.Find("ScrollMagia").GetChild(0).GetChild(0).GetComponent<CheckScrollMagic>();
+					checkScrollMagic.Refresh ();
+				}
+				if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "Personaje2") {
+					//Desactivamos el menú raiz al completo (selector de pjs y comandos)
+					actualMenu.transform.parent.gameObject.SetActive (false);
+					magicMenu.SetActive (true);
+					//Accedemos a los stats de Isabelle
+					magicMenu.GetComponent<CheckMagicMenu> ().isIsabelle = false;
 				}
 			}
 		} else {

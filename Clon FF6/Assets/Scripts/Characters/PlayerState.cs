@@ -10,6 +10,7 @@ public class PlayerState : MonoBehaviour {
 	public PlayerStats savedBasePlayerStats;
 	public List<ObjectStats> savedObjectStats;
 	public List<EquipmentStats> savedEquipmentStats;
+	public List<MagicStats> savedMagicStats;
 	public PlayerEquipment savedPlayerEquipment = new PlayerEquipment ();
 	public GameObject player;
 	public static PlayerState Instance;
@@ -41,6 +42,7 @@ public class PlayerState : MonoBehaviour {
 			initiatePlayers ();
 			initiateObjects ();
 			initiateEquipment ();
+			initiateMagics ();
 		}
 	}
 
@@ -223,5 +225,25 @@ public class PlayerState : MonoBehaviour {
 		equipment4.user = "Isabelle";
 
 		savedEquipmentStats.Add (equipment1); savedEquipmentStats.Add (equipment2);savedEquipmentStats.Add (equipment3); savedEquipmentStats.Add (equipment4);
+	}
+
+	public void initiateMagics(){
+		MagicStats magic1 = new MagicStats ();
+		magic1.nameObject = "Fuego";
+		magic1.description = "Ataque destructivo que crea una llama";
+		magic1.typeMagic = TypeMagic.Damage;
+		magic1.damageOrHeal = 50;
+		magic1.expensePM = 4;
+		magic1.user = "Isabelle";
+
+		MagicStats magic2 = new MagicStats ();
+		magic2.nameObject = "Cura";
+		magic2.description = "Magia curativa que restaura la vitalidad de un personaje";
+		magic2.typeMagic = TypeMagic.Heal;
+		magic2.damageOrHeal = 30;
+		magic2.expensePM = 4;
+		magic2.user = "Isabelle";
+
+		savedMagicStats.Add (magic1); savedMagicStats.Add (magic2);
 	}
 }

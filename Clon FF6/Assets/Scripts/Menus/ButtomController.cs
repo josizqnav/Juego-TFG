@@ -98,6 +98,23 @@ public class ButtomController : MonoBehaviour {
 				//Ponemos como seleccionado el primer botón
 				GameObject.Find ("BotonPersonaje1").GetComponent<ButtomController>().selected = true;
 			}
+			//Si elegimos magia
+			if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "Magia") {
+				//Deseleccionamos el botón y dejamos por defecto seleccionado condicion, desactivamos el menú
+				actualMenu.transform.Find("BotonMagia").gameObject.GetComponent<ButtomController>().selected = false;
+				actualMenu.GetComponent<MainMenuController> ().position = 0;
+				GameObject buttonCondition = GameObject.Find ("BotonCondicion"); 
+				buttonCondition.GetComponent<ButtomController> ().selected = true;
+				buttonCondition.SetActive (false);
+				actualMenu.GetComponent<MainMenuController> ().enabled = false;
+				//Activamos el menu selector de pjs y lo ponemos en modo condicion
+				MainMenuControllerPlus menu = nextMenu.GetComponent<MainMenuControllerPlus> ();
+				menu.enabled = true;
+				menu.isMagic = true;
+				menu.position = 0;
+				//Ponemos como seleccionado el primer botón
+				GameObject.Find ("BotonPersonaje1").GetComponent<ButtomController>().selected = true;
+			}
 			//Si elegimos equipo
 			if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "Equipo") {
 				//Deseleccionamos el botón y dejamos por defecto seleccionado condicion, desactivamos el menú
@@ -155,6 +172,18 @@ public class ButtomController : MonoBehaviour {
 				actualMenu.transform.parent.gameObject.SetActive (false);
 				//Activamos el menu raiz
 				GameObject.Find ("MenuJugador").transform.GetChild (0).GetChild (0).gameObject.SetActive (true);
+			}
+			//Si pulsamos X al elegir pj para aplicar magia
+			if (Input.GetKeyDown (KeyCode.X) && (nameButtom == "ApliMagiaPj1" || nameButtom == "ApliMagiaPj2")) {
+				//Dejamos el selector por defecto
+				MagicMenuSelectorController menu1 = actualMenu.GetComponent<MagicMenuSelectorController> ();
+				this.selected = false;
+				menu1.buttoms [0].selected = true;
+				menu1.position = 0;
+
+				actualMenu.SetActive (false);
+				nextMenu.GetComponent<MenuMagicController> ().enabled = true;
+				menu1.buttonSelected.enabled = true;
 			}
 		} else {
 			ImageButtom.color = colors [0];

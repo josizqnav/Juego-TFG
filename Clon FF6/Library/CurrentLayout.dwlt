@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1350
     height: 619
-  m_MinSize: {x: 887, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 887, y: 342}
+  m_MaxSize: {x: 16012, y: 8042}
   vertical: 0
-  controlID: 155
+  controlID: 5058
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 1073
     height: 619
-  m_MinSize: {x: 610, y: 492}
-  m_MaxSize: {x: 14006, y: 14042}
+  m_MinSize: {x: 610, y: 342}
+  m_MaxSize: {x: 12010, y: 8042}
   vertical: 1
-  controlID: 156
+  controlID: 5059
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 221}
   m_MaxSize: {x: 12010, y: 4021}
   vertical: 0
-  controlID: 157
+  controlID: 4819
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -255,10 +255,10 @@ MonoBehaviour:
     y: 348
     width: 1073
     height: 271
-  m_MinSize: {x: 336, y: 271}
-  m_MaxSize: {x: 14006, y: 10021}
+  m_MinSize: {x: 206, y: 121}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 91
+  controlID: 5060
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -277,14 +277,14 @@ MonoBehaviour:
     y: 0
     width: 491
     height: 271
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 19}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 19}
   - {fileID: 20}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -441,9 +441,9 @@ MonoBehaviour:
     height: 327
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a4310000
-    m_LastClickedID: 12708
-    m_ExpandedIDs: a6fbffff00000000402f0000902f0000ba2f0000cc2f00001a3000005a3100007c3100009a310000a4310000
+    m_SelectedIDs: 0c4fffff
+    m_LastClickedID: -45300
+    m_ExpandedIDs: c4d3fdffda0cfeff1e60feff0c4fffffa6fbffff00000000622e0000862e00008e2e0000562f0000722f0000c22f00000a30000058310000bc310000de3100000632000054320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -498,9 +498,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 271.80847, y: 157.91765, z: 3.3125}
+    m_Target: {x: 267.97427, y: 161.56732, z: 3.180418}
     speed: 2
-    m_Value: {x: 271.80847, y: 157.91765, z: 3.3125}
+    m_Value: {x: 267.97427, y: 161.56732, z: 3.180418}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -527,9 +527,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 326.76086
+    m_Target: 340.08356
     speed: 2
-    m_Value: 326.76086
+    m_Value: 340.08356
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -605,20 +605,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/Menus/Character Menu/Equipment Menu
+    - Assets/Scripts/Menus/Character Menu/MagicMenu
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Menus/Character Menu/Equipment Menu
+  - Assets/Scripts/Menus/Character Menu/MagicMenu
   m_LastFoldersGridSize: 64
   m_LastProjectPath: "C:\\Users\\Jos\xE9Antonio\\Desktop\\Juego TFG\\Juego-TFG\\Clon
     FF6"
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 219.07777}
-    m_SelectedIDs: 9e2a0000
-    m_LastClickedID: 10910
-    m_ExpandedIDs: 000000007a280000ba290000c4290000922a00001e2b00005c2b0000d22b00004a2c000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 223}
+    m_SelectedIDs: 722b0000
+    m_LastClickedID: 11122
+    m_ExpandedIDs: 0000000086280000c6290000d02900009e2a00002a2b0000682b0000e02b00005c2c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -646,7 +646,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007a280000ba290000c4290000922a00001e2b00005c2b0000d22b00004a2c0000
+    m_ExpandedIDs: 0000000086280000c6290000d02900009e2a00002a2b0000682b0000e02b00005c2c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -671,9 +671,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 06320000
+    m_LastClickedInstanceID: 12806
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000fa280000662700000000000010060000d6330000e6330000b0480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -829,7 +829,7 @@ MonoBehaviour:
     y: 100
     width: 275
     height: 598
-  m_ScrollPosition: {x: 0, y: 0}
+  m_ScrollPosition: {x: 0, y: 280.95508}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 219
