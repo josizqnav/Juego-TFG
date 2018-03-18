@@ -60,7 +60,7 @@ public class PlayerState : MonoBehaviour {
 		savedPlayerStats.nameCharacter = "Isabelle";
 		savedPlayerStats.level = 1;
 		savedPlayerStats.maxVitality = 53;
-		savedPlayerStats.actualVitality = 53;
+		savedPlayerStats.actualVitality = 30;
 		savedPlayerStats.maxMagicPoints = 5;
 		savedPlayerStats.actualMagicPoints = 5;
 		savedPlayerStats.strength = 40;
@@ -245,5 +245,14 @@ public class PlayerState : MonoBehaviour {
 		magic2.user = "Isabelle";
 
 		savedMagicStats.Add (magic1); savedMagicStats.Add (magic2);
+	}
+
+	//Provisionalmente aquí
+	public void healAlly (MagicStats magic, PlayerStats playerHealed, PlayerStats playerHealer) {
+		playerHealer.actualMagicPoints -= magic.expensePM;
+		playerHealed.actualVitality += (magic.damageOrHeal * (playerHealer.magic / 10));
+		if (playerHealed.actualVitality > playerHealed.maxVitality) {
+			playerHealed.actualVitality = playerHealed.maxVitality;
+		}
 	}
 }

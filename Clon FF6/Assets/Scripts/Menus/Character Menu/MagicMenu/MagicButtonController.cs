@@ -31,6 +31,11 @@ public class MagicButtonController : MonoBehaviour {
 					selectorMagic.SetActive (true);
 					selectorMagic.GetComponent<MagicMenuSelectorController> ().magic = magicStats;
 					selectorMagic.GetComponent<MagicMenuSelectorController> ().buttonSelected = this;
+					//Si el curador es Isabelle le pasamos sus stats, si es Marlon hacemos lo mismo con él
+					if (GameObject.Find ("SubmenuMagia").GetComponent<CheckMagicMenu> ().isIsabelle) {
+						selectorMagic.GetComponent<MagicMenuSelectorController> ().playerHealer = PlayerState.Instance.savedPlayerStats;
+					} else {
+					}
 					scroollMagic.GetComponent<MenuMagicController> ().enabled = false;
 					this.enabled = false;
 				} else {
