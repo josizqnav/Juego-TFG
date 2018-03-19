@@ -178,15 +178,17 @@ public class ButtomController : MonoBehaviour {
 				if (PlayerState.Instance.savedPlayerStats.actualVitality < PlayerState.Instance.savedPlayerStats.maxVitality) {
 					MagicMenuSelectorController menu1 = actualMenu.GetComponent<MagicMenuSelectorController> ();
 					PlayerState.Instance.healAlly (menu1.magic, PlayerState.Instance.savedPlayerStats, menu1.playerHealer);
-					//Volvemos atrás
-					//Dejamos el selector por defecto
-					this.selected = false;
-					menu1.buttoms [0].selected = true;
-					menu1.position = 0;
+					//Si el Pm no cubre el coste de la magia volvemos atrás
+					if (menu1.playerHealer.actualMagicPoints < menu1.magic.expensePM) {
+						this.selected = false;
+						menu1.buttoms [0].selected = true;
+						menu1.position = 0;
 
-					actualMenu.SetActive (false);
-					nextMenu.GetComponent<MenuMagicController> ().enabled = true;
-					menu1.buttonSelected.enabled = true;
+						actualMenu.SetActive (false);
+						nextMenu.GetComponent<MenuMagicController> ().enabled = true;
+						menu1.buttonSelected.enabled = true;
+					}
+
 
 				} else {
 					GameObject panelMaxVit = actualMenu.GetComponent<MagicMenuSelectorController> ().panelMaxVit;

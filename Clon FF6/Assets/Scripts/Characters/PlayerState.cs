@@ -61,8 +61,8 @@ public class PlayerState : MonoBehaviour {
 		savedPlayerStats.level = 1;
 		savedPlayerStats.maxVitality = 53;
 		savedPlayerStats.actualVitality = 30;
-		savedPlayerStats.maxMagicPoints = 5;
-		savedPlayerStats.actualMagicPoints = 5;
+		savedPlayerStats.maxMagicPoints = 12;
+		savedPlayerStats.actualMagicPoints = 12;
 		savedPlayerStats.strength = 40;
 		savedPlayerStats.defense = 48;
 		savedPlayerStats.magic = 25;
@@ -74,8 +74,8 @@ public class PlayerState : MonoBehaviour {
 		savedBasePlayerStats.level = 1;
 		savedBasePlayerStats.maxVitality = 53;
 		savedBasePlayerStats.actualVitality = 53;
-		savedBasePlayerStats.maxMagicPoints = 5;
-		savedBasePlayerStats.actualMagicPoints = 5;
+		savedBasePlayerStats.maxMagicPoints = 12;
+		savedBasePlayerStats.actualMagicPoints = 12;
 		savedBasePlayerStats.strength = 40;
 		savedBasePlayerStats.defense = 48;
 		savedBasePlayerStats.magic = 25;

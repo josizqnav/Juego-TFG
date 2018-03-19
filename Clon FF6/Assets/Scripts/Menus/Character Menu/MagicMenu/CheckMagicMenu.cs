@@ -5,13 +5,22 @@ using UnityEngine.UI;
 
 public class CheckMagicMenu : MonoBehaviour {
 	public bool isIsabelle;
-	public Text textPJ;
+	public Text namePj, vitality, pm, level;
+	public Image imagePj1, imagePj2;
 
 	void FixedUpdate () {
 		if (isIsabelle) {
-			textPJ.text = "Isabelle";
+			namePj.text = "Isabelle";
+			vitality.text = PlayerState.Instance.savedPlayerStats.actualVitality + " / " +
+				PlayerState.Instance.savedPlayerStats.maxVitality;
+			pm.text = PlayerState.Instance.savedPlayerStats.actualMagicPoints + " / " +
+				PlayerState.Instance.savedPlayerStats.maxMagicPoints;
+			level.text = PlayerState.Instance.savedPlayerStats.level.ToString();
+			imagePj1.gameObject.SetActive (true);
+			imagePj2.gameObject.SetActive (false);
 		} else {
-			textPJ.text = "Marlon";
+			imagePj1.gameObject.SetActive (false);
+			imagePj2.gameObject.SetActive (true);
 		}
 	}
 }
