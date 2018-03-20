@@ -98,6 +98,14 @@ public class ButtomController : MonoBehaviour {
 				//Ponemos como seleccionado el primer botón
 				GameObject.Find ("BotonPersonaje1").GetComponent<ButtomController>().selected = true;
 			}
+			//Si elegimos objeto
+			if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "Objetos") {
+				actualMenu.SetActive (false);
+				nextMenu.SetActive (true);
+				//Creamos los botones
+				CheckScrollObjects checkScrollObjects = nextMenu.transform.GetChild (0).GetChild (0).GetComponent<CheckScrollObjects> ();
+				checkScrollObjects.RefreshDisplay ();
+			}
 			//Si elegimos magia
 			if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "Magia") {
 				//Deseleccionamos el botón y dejamos por defecto seleccionado condicion, desactivamos el menú

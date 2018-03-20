@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MenuObjectController : MonoBehaviour {
 	//Lista de objetos y botones a crear
 	public CheckScrollObjects checkScrollObjects;
-	public ObjectButtonController[] buttons;
+	public List<ObjectButtonController> buttons;
 	//Vector que hará de matriz 2D para obtener la posición de los botones
 	public Vector2 position = new Vector2(0, 0);
 
@@ -94,8 +94,8 @@ public class MenuObjectController : MonoBehaviour {
 			return true;
 		}
 		//No podemos bajar más
-		if (position.y > (buttons.Length/2) - 1) {
-			position.y = (buttons.Length / 2) - 1;
+		if (position.y > (buttons.Count/2) - 1) {
+			position.y = (buttons.Count / 2) - 1;
 			buttons [positionAux].selected = true;
 			return true;
 		}
@@ -116,7 +116,7 @@ public class MenuObjectController : MonoBehaviour {
 	//Controlará el movimiento del scroll conforme se baje o suba en la lista
 	private void controlScroll(){
 		//Obtenemos el valor máximo de Y
-		float maxY = Mathf.Round ((buttons.Length - 1) / 2);
+		float maxY = Mathf.Round ((buttons.Count - 1) / 2);
 		//Actualizamos la posición del scroll
 		scrollRect.value = 1.0f - (position.y / maxY);
 	}

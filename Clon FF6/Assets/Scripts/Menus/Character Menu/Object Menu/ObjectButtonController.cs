@@ -12,6 +12,8 @@ public class ObjectButtonController : MonoBehaviour {
 	//Texto que tendrá el botón
 	public Text textObject;
 
+	ObjectStats objectStats;
+
 	// Inicializamos la imagen y los colores
 	void Start () {
 		ImageButtom = GetComponent<Image> ();
@@ -34,5 +36,9 @@ public class ObjectButtonController : MonoBehaviour {
 	//Le damos el texto adecuado al botón
 	public void Setup (ObjectStats object1){
 		textObject.text = object1.nameObject + "\tx" + object1.num;
+		if (object1.typeObject == TypeObject.Damage) {
+			textObject.color = Color.gray;
+		}
+		objectStats = object1;
 	}
 }
