@@ -102,16 +102,16 @@ public class PlayerState : MonoBehaviour {
 
 		ObjectStats object3 = new ObjectStats();
 		object3.nameObject = "Ultrapoción";
-		object3.description = "Cura 50 puntos mágicos a un aliado";
+		object3.description = "Cura 50 de vitalidad a un aliado";
 		object3.damageOrHeal = 50;
-		object3.typeObject = TypeObject.HealPM;
+		object3.typeObject = TypeObject.HealVT;
 		object3.num = 1;
 
 		ObjectStats object4 = new ObjectStats();
 		object4.nameObject = "Superpoción";
-		object4.description = "Cura 50 puntos mágicos a un aliado";
+		object4.description = "Cura 50 de vitalidad a un aliado";
 		object4.damageOrHeal = 50;
-		object4.typeObject = TypeObject.HealPM;
+		object4.typeObject = TypeObject.HealVT;
 		object4.num = 1;
 
 		ObjectStats object5 = new ObjectStats();
@@ -130,65 +130,29 @@ public class PlayerState : MonoBehaviour {
 
 		ObjectStats object7 = new ObjectStats();
 		object7.nameObject = "Lanzallamas";
-		object7.description = "Cura 50 puntos mágicos a un aliado";
+		object7.description = "Lanza un ataque de fuego a un enemigo";
 		object7.damageOrHeal = 50;
-		object7.typeObject = TypeObject.HealPM;
+		object7.typeObject = TypeObject.Damage;
 		object7.num = 1;
 
 		ObjectStats object8 = new ObjectStats();
 		object8.nameObject = "Lanzatormenta";
-		object8.description = "Cura 50 puntos mágicos a un aliado";
+		object8.description = "Lanza un ataque de rayo a un enemigo";
 		object8.damageOrHeal = 50;
-		object8.typeObject = TypeObject.HealPM;
+		object8.typeObject = TypeObject.Damage;
 		object8.num = 1;
 
 		ObjectStats object9 = new ObjectStats();
-		object9.nameObject = "Aguja de oro";
-		object9.description = "Cura 50 puntos mágicos a un aliado";
+		object9.nameObject = "Lanzaventisca";
+		object9.description = "Lanza un ataque de hielo a un enemigo";
 		object9.damageOrHeal = 50;
-		object9.typeObject = TypeObject.HealPM;
+		object9.typeObject = TypeObject.Damage;
 		object9.num = 1;
 
-		ObjectStats object10 = new ObjectStats();
-		object10.nameObject = "Antídoto";
-		object10.description = "Cura 50 puntos mágicos a un aliado";
-		object10.damageOrHeal = 50;
-		object10.typeObject = TypeObject.HealPM;
-		object10.num = 1;
-
-		ObjectStats object11 = new ObjectStats();
-		object11.nameObject = "Colirio";
-		object11.description = "Cura 50 puntos mágicos a un aliado";
-		object11.damageOrHeal = 50;
-		object11.typeObject = TypeObject.HealPM;
-		object11.num = 1;
-
-		ObjectStats object12 = new ObjectStats();
-		object12.nameObject = "Panecea";
-		object12.description = "Cura 50 puntos mágicos a un aliado";
-		object12.damageOrHeal = 50;
-		object12.typeObject = TypeObject.HealPM;
-		object12.num = 1;
-
-		ObjectStats object13 = new ObjectStats();
-		object13.nameObject = "Lanzaventisca";
-		object13.description = "Lanza un ataque de hielo a un enemigo";
-		object13.damageOrHeal = 50;
-		object13.typeObject = TypeObject.HealPM;
-		object13.num = 1;
-
-		ObjectStats object14 = new ObjectStats();
-		object14.nameObject = "Vacuna";
-		object14.description = "Cura 50 puntos mágicos a un aliado";
-		object14.damageOrHeal = 50;
-		object14.typeObject = TypeObject.HealPM;
-		object14.num = 1;
 
 		savedObjectStats.Add (object1); savedObjectStats.Add (object2); savedObjectStats.Add (object3);
 		savedObjectStats.Add (object4); savedObjectStats.Add (object5); savedObjectStats.Add (object6);
 		savedObjectStats.Add (object7); savedObjectStats.Add (object8); savedObjectStats.Add (object9);
-		savedObjectStats.Add (object10); savedObjectStats.Add (object11); savedObjectStats.Add (object12);
-		savedObjectStats.Add (object13); savedObjectStats.Add (object14);
 	}
 
 	public void initiateEquipment(){
@@ -255,4 +219,45 @@ public class PlayerState : MonoBehaviour {
 			playerHealed.actualVitality = playerHealed.maxVitality;
 		}
 	}
-}
+
+	public bool applyObject(ObjectStats objectStats, PlayerStats playerStats, CheckScrollObjects checkScrollObjects, CheckSelectorPjObjeto checkSelectorPjObject){
+		bool res = false;
+		if (objectStats.typeObject == TypeObject.HealVT) {
+			playerStats.actualVitality += objectStats.damageOrHeal;
+			if (playerStats.actualVitality > playerStats.maxVitality) {
+				playerStats.actualVitality = playerStats.maxVitality;
+			}
+		}
+		if (objectStats.typeObject == TypeObject.HealPM) {
+			playerStats.actualMagicPoints += objectStats.damageOrHeal;
+			if (playerStats.actualMagicPoints > playerStats.maxMagicPoints) {
+				playerStats.actualMagicPoints = playerStats.maxMagicPoints;
+			}
+		}
+
+		objectStats.num--;
+		if (objectStats.num < 1) {
+			foreach (ObjectStats o in PlayerState.Instance.savedObjectStats) {
+				if (o.nameObject == objectStats.nameObject) {
+					PlayerState.Instance.savedObjectStats.Remove (o);
+					checkScrollObjects.RefreshDisplay ();
+					break;
+				}
+			}
+			res = true;
+		} else {
+			checkSelectorPjObject.textNumObject.text = "Objeto:"+ "\t" + objectStats.num;
+			checkScrollObjects.RefreshDisplay ();
+			/*foreach (ObjectStats o in PlayerState.Instance.savedObjectStats) {
+				if (o.nameObject == objectStats.nameObject) {
+					int index = PlayerState.Instance.savedObjectStats.IndexOf (o);
+					//PlayerState.Instance.savedObjectStats [index].num--;
+					checkScrollObjects.RefreshDisplay ();
+					break;
+				}*/
+			res = false;
+			}
+		return res;
+		}
+	}
+		

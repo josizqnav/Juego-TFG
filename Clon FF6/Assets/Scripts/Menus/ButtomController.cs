@@ -58,10 +58,16 @@ public class ButtomController : MonoBehaviour {
 					actualMenu.SetActive (false);
 					nextMenu.SetActive (true);
 				}
-				if (nameButtom=="Condicion" || nameButtom=="Guardar"
-					|| nameButtom=="Equipo" || nameButtom=="Objetos" || nameButtom=="Magia" ) {
+				if (nameButtom=="Condicion"	|| nameButtom=="Equipo" || nameButtom=="Magia" ) {
 					//Accedemos al padre del padre del padre: SubmenúComandos<MenuRaiz < Panel< MenuJugador. Y desactivamos menú
 					actualMenu.transform.parent.parent.parent.gameObject.SetActive (false);
+					//Reactivamos al jugador.
+					PlayerState.Instance.GetComponent<Animator> ().enabled = true;
+					PlayerState.Instance.GetComponent<PlayerController> ().enabled = true;
+				}
+				if (nameButtom == "Guardar" || nameButtom == "Objetos") {
+					//Accedemos al padre del padre: MenuRaiz < Panel< MenuJugador. Y desactivamos menú
+					actualMenu.transform.parent.parent.gameObject.SetActive (false);
 					//Reactivamos al jugador.
 					PlayerState.Instance.GetComponent<Animator> ().enabled = true;
 					PlayerState.Instance.GetComponent<PlayerController> ().enabled = true;
@@ -180,6 +186,71 @@ public class ButtomController : MonoBehaviour {
 				actualMenu.transform.parent.gameObject.SetActive (false);
 				//Activamos el menu raiz
 				GameObject.Find ("MenuJugador").transform.GetChild (0).GetChild (0).gameObject.SetActive (true);
+			}
+			//Si elegimos dar el objeto al Pj1
+			if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "ApliObjetoPj1") {
+				ObjectStats objectStats = actualMenu.GetComponent<CheckSelectorPjObjeto> ().objectStats;
+				CheckScrollObjects checkScrollObjects = nextMenu.transform.GetChild (0).GetChild (0).gameObject.GetComponent<CheckScrollObjects> ();
+				ObjectMenuSelectorController menu1 = actualMenu.GetComponent<ObjectMenuSelectorController> ();
+				if (objectStats.typeObject == TypeObject.HealVT) {
+					if (PlayerState.Instance.savedPlayerStats.actualVitality < PlayerState.Instance.savedPlayerStats.maxVitality) {
+						bool isDeleted = PlayerState.Instance.applyObject (objectStats, PlayerState.Instance.savedPlayerStats, checkScrollObjects, actualMenu.GetComponent<CheckSelectorPjObjeto> ());
+						if (isDeleted) {
+							this.selected = false;
+							menu1.buttoms [0].selected = true;
+							menu1.position = 0;
+
+							actualMenu.SetActive (false);
+							nextMenu.GetComponent<MenuObjectController> ().enabled = true;
+							menu1.selectedButton.enabled = true;
+							
+						}
+					} else {
+						GameObject panelMaxVit = actualMenu.GetComponent<ObjectMenuSelectorController> ().panelMaxVitOrPm;
+						actualMenu.GetComponent<ObjectMenuSelectorController> ().enabled = false;
+						this.enabled = false;
+						panelMaxVit.SetActive (true);
+						panelMaxVit.GetComponent<NoMaxVitOrPm> ().button = this;
+					}
+				}
+				if (objectStats.typeObject == TypeObject.HealPM) {
+					if (PlayerState.Instance.savedPlayerStats.actualMagicPoints < PlayerState.Instance.savedPlayerStats.maxMagicPoints) {
+						bool isDeleted = PlayerState.Instance.applyObject (objectStats, PlayerState.Instance.savedPlayerStats, checkScrollObjects, actualMenu.GetComponent<CheckSelectorPjObjeto> ());
+						if (isDeleted) {
+							this.selected = false;
+							menu1.buttoms [0].selected = true;
+							menu1.position = 0;
+
+							actualMenu.SetActive (false);
+							nextMenu.GetComponent<MenuObjectController> ().enabled = true;
+							menu1.selectedButton.enabled = true;
+
+						}
+					} else {
+						GameObject panelMaxVit = actualMenu.GetComponent<ObjectMenuSelectorController> ().panelMaxVitOrPm;
+						actualMenu.GetComponent<ObjectMenuSelectorController> ().enabled = false;
+						this.enabled = false;
+						panelMaxVit.SetActive (true);
+						panelMaxVit.GetComponent<NoMaxVitOrPm> ().button = this;
+					}
+				}
+
+			}
+			//Si elegimos dar el objeto al Pj2
+			if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "ApliObjetoPj2") {
+				
+			}
+			//Si pulsamos X al elegir pj para aplicar magia
+			if (Input.GetKeyDown (KeyCode.X) && (nameButtom == "ApliObjetoPj1" || nameButtom == "ApliObjetoPj2")) {
+				//Dejamos el selector por defecto
+				ObjectMenuSelectorController menu1 = actualMenu.GetComponent<ObjectMenuSelectorController> ();
+				this.selected = false;
+				menu1.buttoms [0].selected = true;
+				menu1.position = 0;
+
+				actualMenu.SetActive (false);
+				nextMenu.GetComponent<MenuObjectController> ().enabled = true;
+				menu1.selectedButton.enabled = true;
 			}
 			//Si elegimos cuarar al Pj1
 			if (Input.GetKeyDown (KeyCode.Z) && nameButtom == "ApliMagiaPj1") {
